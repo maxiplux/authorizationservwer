@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8.0.27
+    platform: linux/x86_64
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_USER=auth
+      - MYSQL_DATABASE=auth
